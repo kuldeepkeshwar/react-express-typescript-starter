@@ -14,13 +14,21 @@
     "start:dev": "pm2 start tools/server/ecosystem-dev.config.js",
     "start": "pm2 start tools/server/ecosystem.config.js",
     "lint": "tslint --project tsconfig.json",
-    "test":"npm run test-client && npm run test-server && npm run coverage-ratchet:client && npm run coverage-ratchet:server",
+    "test": "npm run test-client && npm run test-server && npm run coverage-ratchet:client && npm run coverage-ratchet:server",
     "test-client": "cd src/client && jest --config jest-config.json --coverage --bail",
     "test-server": "cd src/server && jest --config jest-config.json --coverage --bail",
     "coverage-ratchet:client": "jest-coverage-ratchet --configPath ./src/client/jest-config.json --coverageSummaryPath coverage/client/coverage-summary.json",
     "coverage-ratchet:server": "jest-coverage-ratchet --configPath ./src/server/jest-config.json --coverageSummaryPath coverage/server/coverage-summary.json"
   },
-  "keywords": ["react","express","typescript","jest","webpack","hrm","mysql"],
+  "keywords": [
+    "react",
+    "express",
+    "typescript",
+    "jest",
+    "webpack",
+    "hrm",
+    "mysql"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kuldeepkeshwar/react-express-typescript-starter"
