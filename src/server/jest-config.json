@@ -1,0 +1,38 @@
+{
+  "testEnvironment": "node",
+  "moduleFileExtensions": [
+    "js",
+    "ts"
+  ],
+  "moduleDirectories": [
+    "node_modules",
+    "src/server"
+  ],
+  "collectCoverageFrom": [
+    "{utils,services,routes,models,middlewares,config}/**/*.{ts}"
+  ],
+  "coveragePathIgnorePatterns": [
+    "node_modules",
+    "(.mock)\\.(js)$"
+  ],
+  "transform": {
+    "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+  },
+  "testMatch": [
+    "**/*/*.test.(ts|tsx|js)"
+  ],
+  "coverageDirectory": "../../coverage/server",
+  "cacheDirectory": "/var/tmp/jest_cache",
+  "coverageReporters": [
+    "json-summary"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "lines": 2.36,
+      "statements": 2.24,
+      "functions": 3.33,
+      "branches": 0,
+      "statments": 0
+    }
+  }
+}

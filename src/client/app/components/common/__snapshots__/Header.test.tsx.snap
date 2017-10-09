@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header tests Header is rendered properly 1`] = `
+<Header>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <Link
+            onlyActiveOnIndex={false}
+            style={Object {}}
+            to="/"
+          >
+            <a
+              onClick={[Function]}
+              style={Object {}}
+            >
+              Home
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link
+            onlyActiveOnIndex={false}
+            style={Object {}}
+            to="/about"
+          >
+            <a
+              onClick={[Function]}
+              style={Object {}}
+            >
+              About
+            </a>
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</Header>
+`;

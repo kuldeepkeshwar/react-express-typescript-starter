@@ -1,0 +1,50 @@
+{
+  "testEnvironment": "jsdom",
+  "moduleFileExtensions": [
+    "js",
+    "ts",
+    "tsx",
+    "jsx"
+  ],
+  "moduleDirectories": [
+    "node_modules",
+    "src/client"
+  ],
+  "collectCoverageFrom": [
+    "{app}/**/*.{ts,tsx}"
+  ],
+  "coveragePathIgnorePatterns": [
+    "node_modules",
+    "(.mock)\\.(js)$"
+  ],
+  "transform": {
+    "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+  },
+  "testMatch": [
+    "**/*/*.test.(ts|tsx|js)"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "lines": 17.2,
+      "statements": 15.38,
+      "functions": 18.18,
+      "branches": 17.78,
+      "statments": 0
+    }
+  },
+  "coverageReporters": [
+    "json-summary"
+  ],
+  "coverageDirectory": "../../coverage/client",
+  "cacheDirectory": "/var/tmp/jest_cache",
+  "setupFiles": [
+    "<rootDir>/__mocks__/setup.js"
+  ],
+  "snapshotSerializers": [
+    "enzyme-to-json/serializer"
+  ],
+  "moduleNameMapper": {
+    "\\.scss$": "<rootDir>/__mocks__/style-mock.js",
+    "\\.(gif|png|jpg|jpeg|ttf|eot|svg|woff(2)?)(\\?[a-z0-9]+)?$": "<<rootDir>/__mocks__/file-mock.js"
+  }
+}

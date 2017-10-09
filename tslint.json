@@ -1,0 +1,16 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint-react", "tslint:latest"],
+  "jsRules": {},
+  "rules": {
+    // use single quotes, but enforce double quotes in JSX
+    "quotemark": [true, "single", "jsx-double"],
+    // I prefer no semi colons :)
+    "semicolon": [true, "never"],
+    // This rule makes each Interface be prefixed with 'I' which I don't like
+    "interface-name": [true, "never-prefix"],
+    // This rule enforces objects to always have keys in alphabetical order
+    "object-literal-sort-keys": false
+  },
+  "rulesDirectory": []
+}
