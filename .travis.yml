@@ -2,6 +2,7 @@ language: node_js
 node_js:
  - "node"
 script:
+ - npm i tslint pm2 -g
  - npm run lint
  - npm run test
  - npm run build
