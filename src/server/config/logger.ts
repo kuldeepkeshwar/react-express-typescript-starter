@@ -1,21 +1,23 @@
 
-import { getConfigurationValue } from 'config'
 import * as fs from 'fs'
 import * as logger from 'morgan'
 import * as path from 'path'
 import * as rfs from 'rotating-file-stream'
-import { getLogger } from 'config/child-logger'
+import { getConfigurationValue } from './../config'
+import { getLogger } from './../config/child-logger'
 
 const createFile = (filename) => {
   fs.open(filename, 'r', (err) => {
     if (err) {
       fs.writeFile(filename, '', (error) => {
         if (error) {
-          console.log(error)
+           throw (error)
         }
+        // tslint:disable-next-line:no-console
         console.log('The file was saved!', filename)
       })
     } else {
+      // tslint:disable-next-line:no-console
       console.log('The file exists!', filename)
     }
   })
@@ -46,6 +48,4 @@ const accessLogStream = rfs(accessLogPath, {
   path: logDirectory,
 })
 
-logger.token('Request-Token', (req) => req.headers['Request-Token'])
-
-export const loggerMiddleware = logger('[:date[iso]] :remote-addr ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms ":user-agent" ":referrer" :Request-Token', { stream: accessLogStream })
+export const loggerMiddleware = logger('combined', { stream: accessLogStream })

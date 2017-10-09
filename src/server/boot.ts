@@ -3,9 +3,9 @@
  */
 
 import * as http from 'http'
-import app from 'main'
+import app from './main'
 
-import { appLogs } from 'config/logger'
+import { appLogs } from './config/logger'
 
 /**
  * Create HTTP server.

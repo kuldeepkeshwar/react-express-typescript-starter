@@ -1,8 +1,8 @@
-import { getConfigurationValue } from 'config'
 import * as mysqlSession from 'express-mysql-session'
 import * as expressSession from 'express-session'
-import 'models/db/session'
-import { COOKIES, MAXAGE } from 'utils/constants'
+import { getConfigurationValue } from './../config'
+import './../models/db/session'
+import { COOKIES, MAXAGE } from './../utils/constants'
 
 const databaseConfig = getConfigurationValue('database')
 

@@ -1,4 +1,4 @@
-import { getConfigurationValue } from 'config'
+import { getConfigurationValue } from './../config'
 
 export const COOKIES = {
   SESSION: `${getConfigurationValue('app')}-tk`,

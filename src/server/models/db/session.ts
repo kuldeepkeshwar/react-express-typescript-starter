@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize'
-import { sequelize } from 'utils/mysql-client'
+import { sequelize } from './../../utils/mysql-client'
 
 const Session = sequelize.define('sessions', {
   session_id: { type: Sequelize.STRING, allowNull: false, unique: 'sessions_compositeIndex' },
