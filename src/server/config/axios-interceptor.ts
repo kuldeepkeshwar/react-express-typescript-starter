@@ -1,6 +1,6 @@
-import axios, { AxiosRequestConfig } from "axios";
-import { getConfigurationValue } from 'config'
-import { appLogs } from 'config/logger'
+import axios, { AxiosRequestConfig } from 'axios'
+import { getConfigurationValue } from './'
+import { appLogs } from './logger'
 
 interface CustomAxiosRequestConfig extends AxiosRequestConfig {
   responseTime?: number,

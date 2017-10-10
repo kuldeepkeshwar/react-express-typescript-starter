@@ -1,16 +1,16 @@
 import * as bodyParser from 'body-parser'
-import 'config/axios-interceptor'
-import { appLogs, loggerMiddleware } from 'config/logger'
 import * as cookieParser from 'cookie-parser'
 import * as ejs from 'ejs'
 import * as express from 'express'
 import * as helmet from 'helmet'
-import expressStaticGzip from 'middlewares/compression'
-import session from 'middlewares/session'
 import * as onHeaders from 'on-headers'
 import * as path from 'path'
-import api from 'routes/api'
-import { pageRouter } from 'routes/index'
+import './config/axios-interceptor'
+import { appLogs, loggerMiddleware } from './config/logger'
+import expressStaticGzip from './middlewares/compression'
+import session from './middlewares/session'
+import api from './routes/api'
+import { pageRouter } from './routes/index'
 
 interface ErrorConstructor {
   new(message?: string, status?: number): any

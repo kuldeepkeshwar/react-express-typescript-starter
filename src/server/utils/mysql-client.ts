@@ -1,6 +1,6 @@
-import { getConfigurationValue } from 'config'
-import { appLogs } from 'config/logger'
 import Sequelize from 'sequelize'
+import { getConfigurationValue } from './../config'
+import { appLogs } from './../config/logger'
 
 const databaseConfig = getConfigurationValue('database')
 

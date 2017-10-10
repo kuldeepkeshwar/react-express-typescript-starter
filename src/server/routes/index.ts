@@ -1,6 +1,6 @@
-import { appLogs } from 'config/logger'
 import * as express from 'express'
 import * as path from 'path'
+import { appLogs } from './../config/logger'
 
 export const pageRouter = express.Router()
 
