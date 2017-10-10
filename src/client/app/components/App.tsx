@@ -24,7 +24,7 @@ class App extends React.Component<{}, AppSate > {
         {this.props.children}
       </div>
     )
-  },
+  }
 }
 
 export default App

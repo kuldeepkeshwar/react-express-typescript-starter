@@ -3,15 +3,16 @@ import * as fs from 'fs'
 import * as logger from 'morgan'
 import * as path from 'path'
 import * as rfs from 'rotating-file-stream'
-import { getConfigurationValue } from './../config'
-import { getLogger } from './../config/child-logger'
+import { getConfigurationValue } from './'
+import { getLogger } from './child-logger'
 
 const createFile = (filename) => {
   fs.open(filename, 'r', (err) => {
     if (err) {
       fs.writeFile(filename, '', (error) => {
         if (error) {
-           throw (error)
+          // tslint:disable-next-line:no-console
+          console.log(error)
         }
         // tslint:disable-next-line:no-console
         console.log('The file was saved!', filename)
