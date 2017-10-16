@@ -46,6 +46,4 @@ const accessLogStream = rfs(accessLogPath, {
   path: logDirectory,
 })
 
-logger.token('Request-Token', (req) => req.headers['Request-Token'])
-
-export const loggerMiddleware = logger('[:date[iso]] :remote-addr ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms ":user-agent" ":referrer" :Request-Token', { stream: accessLogStream })
+export const loggerMiddleware = logger('combined', { stream: accessLogStream })
