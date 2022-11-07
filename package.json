@@ -67,7 +67,7 @@
     "jest-coverage-ratchet": "git+https://github.com/kuldeepkeshwar/jest-coverage-ratchet.git",
     "jquery": "^2.2.3",
     "jsdom": "^9.0.0",
-    "mocha": "^2.4.5",
+    "mocha": "^10.1.0",
     "node-sass": "^3.7.0",
     "react-addons-test-utils": "^15.0.2",
     "react-hot-loader": "^1.3.0",
