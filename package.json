@@ -90,7 +90,7 @@
     "bunyan-rotating-file-stream": "^1.6.3",
     "cookie-parser": "^1.4.3",
     "ejs": "^2.5.7",
-    "express": "^4.13.4",
+    "express": "^4.17.3",
     "express-mysql-session": "^1.2.2",
     "express-session": "^1.15.6",
     "helmet": "^3.8.2",
